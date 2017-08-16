@@ -26,19 +26,17 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
+          <h1>Todo</h1>
           <!-- TODO write your HTML/Mustache here -->
               <ul class="todo-list">
                 {{#option_1}}
-                  <li>
-                    {{#complete}}
-                      <input type="checkbox" checked>
-                          <del>Learn {{packages}}</del>
-                          {{/complete}}
-                          {{^complete}}
-                          <input type="checkbox">  
-                          {{packages}}
-                        {{/complete}}
-                  </li>{{/option_1}}
+                  {{#completed}}<li>
+                    <del><input type="checkbox" checked> Learn {{packages}}
+                          </del>{{/completed}}
+                  {{#incomplete}}<li>
+                    <input type="checkbox"> Learn {{packages}}
+                        {{/incomplete}}
+                  {{/option_1}}
               </ul>
         </div>
       </div>

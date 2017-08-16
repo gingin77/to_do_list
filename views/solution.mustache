@@ -29,14 +29,13 @@
           <h1>Todo</h1>
           <ul class="todo-list">
           {{#todoList}}
-            <li>Learn&emsp;
+            <li>
               {{#complete}}
-                <input type="checkbox" checked>Learn
+                <input type="checkbox" checked>
                 <del>{{text}}</del>
               {{/complete}}
               {{^complete}}
                 <input type="checkbox">
-              </li>
                 {{text}}
               {{/complete}}
           {{/todoList}}
